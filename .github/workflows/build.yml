@@ -22,14 +22,14 @@ jobs:
 
       - name: Run `packer init`
         id: init
-        run: "packer init ./image.pkr.hcl"
+        run: "packer init ./config.pkr.hcl"
 
       - name: Run `packer validate`
         id: validate
-        run: "packer validate ./image.pkr.hcl"
+        run: "packer validate ./config.pkr.hcl"
         
       - name: Build Artifact
-        run: packer build -color=false -on-error=abort ./image.pkr.hcl
+        run: packer build -color=false -on-error=abort ./config.pkr.hcl
         env:
           HCP_CLIENT_ID: ${{ secrets.HCP_CLIENT_ID }}
           HCP_CLIENT_SECRET: ${{ secrets.HCP_CLIENT_SECRET }}
