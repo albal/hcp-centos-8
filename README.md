@@ -1,6 +1,6 @@
 # hcp-centos-8
 
-A packer repo to build a Centos 8 Stream minimal image for Oracle VirutalBox
+A packer repo to build a Centos 8 Stream minimal image for Oracle VirtualBox
 
 Requirements:
 * Packer
